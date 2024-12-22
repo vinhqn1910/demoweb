@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Báo Sự Cố</title>
+  <link rel="stylesheet" href="style-sc.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Báo cáo sự cố</h1>
+    <form id="incidentForm">
+      <p >Copyright @Thành Vĩnh </p>
+      <label for="maSO">Mã SO:</label>
+      <input type="text" id="maSO" name="maSO" placeholder="Nhập mã SO" required>
+
+      <label for="maDHGHTK">Mã ĐH GHTK:</label>
+      <input type="text" id="maDHGHTK" name="maDHGHTK" placeholder="Nhập mã ĐH GHTK" required>
+
+      <label for="suCo">Sự cố:</label>
+      <input type="text" id="suCo" name="suCo" placeholder="Mô tả sự cố" required>
+
+      <label for="user">User báo sự cố:</label>
+      <input type="text" id="user" name="user" placeholder="Tên user" required>
+
+      <label for="phiNhapDSD">Phí nhập ĐSD:</label>
+      <input type="number" id="phiNhapDSD" name="phiNhapDSD" placeholder="Nhập phí (VNĐ)" required>
+
+      <label for="thongTinThem">Thông tin thêm:</label>
+      <textarea id="thongTinThem" name="thongTinThem" placeholder="Nhập thông tin thêm"></textarea>
+
+      <label for="thoiGian">Thời gian hẹn phản hồi:</label>
+      <input type="datetime-local" id="thoiGian" name="thoiGian" required>
+
+      <button type="submit">Gửi báo cáo</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js"></script>
+</body>
+</html>
